@@ -1,2 +1,8 @@
+name: I Teach 109
+description: My name is Luke, I teach CMPT-109 at Montclair State University and this is my blog.
+
+baseurl: /~maciakl/blog
+url: http://msuweb.montclair.edu/~maciakl/blog
+
 auto: true
 permalink: pretty

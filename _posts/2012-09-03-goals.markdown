@@ -1,0 +1,14 @@
+---
+layout: post
+title: The purpose and goals of this blog
+
+excerpt: I wanted to briefly talk about the goals and the purpose of this blog. I'm not using this space as a platform to post personal rants or random musings. There are other places where I can use that. I want this blog to be relevant to my teaching work and course material.
+---
+
+I wanted to briefly talk about the goals and the purpose of this blog. I'm not using this space as a platform to post personal rants or random musings. There are other places where I can use that. I want this blog to be relevant to my teaching work and course material.
+
+- **Student Resource** - I want to use this blog as an occasional student resource. I plan to post informative articles and/or links relevant to the subjects I talk about in class. 
+- **Instructor Resource** - I have been teaching this course for a few years now, and like most instructors I have developed a number of exercises, topics, class discussion hooks and techniques that I would like to share with others.
+- **Technical Reference** - I have spent more time at MSU than most people here. I have been both a student, and an instructor. I constantly find that the services, tricks and shortcuts I use to make my life at MSU easier are not widely known or used. So I'm planning to share a lot of them here.
+
+Among other things I want this to be a blog revolving around MSU and specifically around CMPT 109. While the course is not particularly challenging to teach (it is a 100 level Gen-Ed class) relating technical information to students can at times be difficult. Sometimes you need to use metaphors, or hands-on exercises to explain particularly abstract ideas. This blog is my feeble attempt to share my work with the rest of MSU community.
