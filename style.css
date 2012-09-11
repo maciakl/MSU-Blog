@@ -34,6 +34,14 @@ strong, em {
     color: gray;
 }
 
+table {
+    border: none;
+}
+
+td {
+    padding-left: 20px;
+}
+
 #content {
 
 	width: 65%;
@@ -45,6 +53,15 @@ strong, em {
 	float: left;
 	width: 200px;
 	min-width: 200px;
+}
+
+#sidebar a:visited,
+#sidebar a:active {
+    color: blue;
+}
+
+#sidebar a:hover {
+    color: blue;
 }
 
 
@@ -81,6 +98,19 @@ strong, em {
 	color: gray;
 }
 
+
+.category a:link, 
+.category a:visited, 
+.category a:active { 
+    color: gray;
+    text-decoration: none;
+}
+
 .above-footer {
     margin-left: 80%;
+}
+
+.above-footer a:visited,
+.above-footer a:active {
+    color: blue;
 }

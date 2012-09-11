@@ -4,5 +4,7 @@ description: My name is Luke, I teach CMPT-109 at Montclair State University and
 baseurl: /~maciakl/blog
 url: http://msuweb.montclair.edu/~maciakl/blog
 
+category_dir: /
+
 auto: true
 permalink: pretty

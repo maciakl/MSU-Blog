@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blogging on MSUWEB
+category: technical-resource
 
 excerpt: The MSUWEB service available to both students and faculty is very useful, but it has one major flaw - it is completely static. There is no server side scripting or database support, which makes it a less than ideal platform for personal blogging. Fortunately, not all blogging platforms require scripting or databases.
 ---
@@ -86,6 +87,8 @@ This will create a temporary development server on your computer on the port 400
 
     http://localhost:4000/~yournetid
 
+The server will keep running, until you kill it or close the window, and Jekyll will re-generate the site each time you update one of the files in your directory. This means that the changes you make will be immediately visible in your browser.
+
 The individual blog posts are kept in the `_posts` directory. I have two sample posts there, with generic *lorem ipsum* place-holder text. If you want to add a new post, you simply create a new markdown file in this directory. The only rule is to follow the naming convention you see on the other files. Your individual post files have to be dated like so:
 
     YYYY-MM-DD-post-title.markdown
@@ -107,9 +110,23 @@ I believe this ought to be more or less self-explanatory. The excerpt will show 
 
 If you want to spruce up the layout, you can edit the `style.css` and `_layouts/default.html` files which contain the main site elements. You can simply refresh your page in the browser at any time to see the changes take effect.
 
-Once you are happy wit how your page looks, and you are ready to deploy it, kill the Jekyll server by hitting Ctrl+C. Now turn your attention to the `_site` subdirectory. This is where your blog was generated. Simply copy everything in that directory to your MSUWEB WebDav folder and watch the magic happen.
+Once you are happy wit how your page looks, and you are ready to deploy it, kill the Jekyll server by hitting Ctrl+C. Now turn your attention to the `_site` subdirectory. This is where your blog was generated. Simply copy everything in that directory to your MSUWEB WebDav folder.
 
-What if you want to add a new post? Fire up Jekyll again, create a new markdown file in the `_posts` directory, type your post up and then copy over the entire `_site` folder again overwriting everything as needed. Or you can use rsync, unison or a similar file sync tool to accomplish the deployment with minimum hassle.
+Or better yet run:
+
+    jekyll --no-auto x:
+
+The `--no-auto` attribute tells Jekyll not to watch the directory for file changes, but simply generate the site and quit. I don't recommend running the command without that attribute, especially if you are working from home as the network latency will considerably slow things down. The `x:` is the new destination (assuming you mounted your WebDav folder on drive X as I explained above). This is probably the quickest and most convenient way to deploy your site.
+
+Your work-flow should be as follows:
+
+1. Start the local server with `jekyll --server`
+1. Write your new post and drop it into `_posts` directory
+1. Make sure everything looks good by checking the local website
+1. Ctrl+C to kill the server
+1. Deploy the site to MSUWEB by running `jekyll --no-auto <MSUWEB>` where `<MSUWEB>` is the WebDav mount point
+
+Alternatively you could use a folder synchronization tool like *rsync* or *unison* to sync `_site` with your WebDav directory.
 
 Happy blogging! If you have any questions, please email me. I'm not setting up comments here for now.
 

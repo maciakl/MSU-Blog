@@ -5,6 +5,7 @@
 	<head>
 		<title>{% if page.title %} {{ page.title }} | {% endif %} I teach 109</title>
         <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
+        <link rel="icon" href="{{site.baseurl}}/favicon.ico" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
 	</head>
 
@@ -22,7 +23,7 @@
 
 			<ul>
                 <li><a href="{{site.baseurl}}/">Home</a></li>
-                <li><a href="{{site.baseurl}}/archive">Archive</a></li>
+                <li><a href="{{site.baseurl}}/archive">Archive</a> ({{site.posts | size}})</li>
                 <li><a href="{{site.baseurl}}/contact">Contact</a></li>
                 <li><a href="{{site.baseurl}}/feed.xml">RSS Feed</a></li>
 			</ul>

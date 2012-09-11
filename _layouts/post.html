@@ -5,8 +5,11 @@ layout: default
 
 <div class="post">
 
-	<h2>{{ page.title }}</h2>
-	<span class="date">{{ page.date | date_to_string }}</span>
+    <h2>{{ page.title }}</h2>
+
+    <span class="date">{{ page.date | date_to_string }}</span><br>
+
+    <span class="category">{{ page.categories | category_links }}</span>
 
 	<div class="entry">{{ content }}</div>
 

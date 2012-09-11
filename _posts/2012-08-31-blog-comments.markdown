@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blog Comments
+category: technical-resource
 
 excerpt: Jekyll does not provide any comment functionality. This makes sense, because there would be no way to capture and pre-process user comments at compile time. Does this mean that Jekyll blogs cannot have comment threads? No, of course not. You just need to use an external service to handle this sort of thing.
 ---

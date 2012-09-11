@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The purpose and goals of this blog
+category: meta
 
 excerpt: I wanted to briefly talk about the goals and the purpose of this blog. I'm not using this space as a platform to post personal rants or random musings. There are other places where I can use that. I want this blog to be relevant to my teaching work and course material.
 ---
