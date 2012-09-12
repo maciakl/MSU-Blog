@@ -17,7 +17,7 @@ By today's standards, the technical specs seem laughable:
 
 * 4 MHz CPU
 * 64 Kb of RAM
-* 5-inch, 52 character × 24 line monochrome CRT display
+* 5-inch, 52 character x 24 line monochrome CRT display
 
 For comparison, an iPhone 4, which fits in your pocket is few hundred times faster:
 

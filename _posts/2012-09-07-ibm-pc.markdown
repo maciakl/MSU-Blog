@@ -1,0 +1,31 @@
+---
+layout: post
+title: How IBM Changed the Computer Market
+category: student-resource
+
+excerpt: IBM PC was not an exceptionally powerful machine. There was nothing special about it's hardware specifications, performance or even the CPU architecture. It was nowhere near the best, fastest of most competently designed machine on the market. But, the way IBM went about selling it drastically changed the computing landscape for years to come.
+---
+
+IBM PC was not an exceptionally powerful machine. There was nothing special about it's hardware specifications, performance or even the CPU architecture. It was nowhere near the best, fastest of most competently designed machine on the market. But, the way IBM went about selling it drastically changed the computing landscape for years to come.
+
+Before the PC, most computers used proprietary architectures. Everyone was building their machines based on their own designs, which were kept as jealously guarded trade secrets. If you wanted to build peripherals or components of a computer system, you usually had to work very closely with it's designers, often having to license proprietary designs, and sign NDA documents. 
+
+To get your foot in the door in the business of selling personal computers you had three choices:
+
+1. If you had a crack team of geeks or engineers at your disposal, you could design your system from scratch. Draw circuit board designs, build prototype in your garage, obtain funding and secure manufacturing deals for the integrated circuits of your design.
+2. You could go to an established computer companies (like Apple, Atari, Commodore), hat in hand, and pay them lots of money to license one of their proprietary chip designs around which you could build your computer.
+3. You could buy one of the aforementioned companies and absorb it.
+
+IBM chose neither of these options. Their team of engineers made a series of very controversial decisions that were unprecedented and almost unheard of at the time. They more or less blew the minds of the entire computing industry - everyone assumed that IBM executives either went insane overnight, or suddenly decided to kill their own company. That is until everyone saw IBM's skyrocketing sales.
+
+What were these controversial decisions?
+
+* They designed a computer mostly using inexpensive, off-the-shelf electronic components (rather than custom made proprietary hardware as it was the custom at the time).
+* They publicly published their basic hardware specifications, design documents and notes and encouraged other companies to use them free of charge (instead of insisting on draconian NDA agreements and expensive licensing fees).
+* They also chose not to provide software applications for their product, instead encouraging software designers to build programs for their platform and sell them directly to customer.
+
+PC was designed as an "open platform". Even though designed by IBM, the hardware and software was independent from the company. Anyone could come along, and start building their own "PC Compatible" computer. If you build a "PC Compatible" machine, it would be able to use all the existing software, components, expansions and peripherals made for IBM PC. The more companies got on the bandwagon, the more demand was there for PC compatible software and hardware, which in turn drove the prices down and increased competition. It created a thriving ecosystem that existed completely outside IBM's control, but which benefited them. As the designers of the platform they were able to mark up their machines basing on brand recognition and prestige in the industry, while at the same time using same cheep components as everyone else to build them.
+
+This move also opened the door to "PC Vendor" companies like Dell which based their business around buying least expensive PC compatible components, assembling them using cheap, unskilled off-shore labor and shipping finished computers to US at rock-bottom prices.
+
+The PC architecture dominated the market so toughly that it is still the most prominent platform today. Chances are that the desktop or laptop (and even some of the tablets) you own is actually running on PC hardware. Yes, even your MacBook. Despite of what Apple marketing materials would lead you to believe, most modern Macs are actually using the same PC compatible CPU and memory designs as the equivalent Dell or HP laptops that run Windows.
