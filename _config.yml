@@ -5,6 +5,7 @@ baseurl: /~maciakl/blog
 url: http://msuweb.montclair.edu/~maciakl/blog
 
 category_dir: /
+exclude: README.markdown, deploy.sh, deploy.cmd
 
 auto: true
 permalink: pretty
