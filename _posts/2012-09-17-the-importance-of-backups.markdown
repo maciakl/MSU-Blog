@@ -24,7 +24,7 @@ The data on your drive is also extremely vulnerable to **electromagnetic interfe
 
 Even if you manage to keep your hard drive away from strong magnets, and protect it from shocks and physical damage, there is still a regular daily **wear and tear** to worry about. Your hard drive is the only component in your computer with moving parts. The actuator arm is in near-constant motion when the computer is on, and there material fatigue is to be expected. Most hard drives have an average lifetime expectancy of 3-5 years (depending on usage).
 
-The new, ultra-fast *solid state* hard drives are much more robust - they don't have moving parts, and they are not vulnerable to magnetic interference but they also have limited lifetimes. The memory cells in the SSD can only be "flashed" a limited number of times before they cease to function. It usually takes hundreds of thousands of writes to "break" a cell, and not all cells are in use at the same time so the average lifespan of an SSD is comparable to that of a regular "spinning" drive.
+The new, ultra-fast *solid state* hard drives are much more robust - they don't have moving parts, and they are not vulnerable to magnetic interference but they also have limited lifetimes. The memory cells in the SSD[^1] can only be "flashed" a limited number of times before they cease to function[^2]. It usually takes hundreds of thousands of writes to "break" a cell, and not all cells are in use at the same time so the average lifespan of an SSD is comparable to that of a regular "spinning" drive.
 
 The point is that it is not a question of **if** your hard drive will fail, but a question of **when**. And the unfortunate fact is that it may happen any time, without any warning. Mac users are as vulnerable to this as PC users.
 
@@ -32,7 +32,7 @@ The point is that it is not a question of **if** your hard drive will fail, but 
 
 You can't prevent your hard drives from failing, but you can take steps to protect your data. The only sane and reasonable and sane thing to do is to back-up your data. And by backup I mean duplication. You should have at least two (but three or four is better) redundant copies of all the information you don't want to lose. Not only that, your backups should be automated (so that you don't forget) and performed as frequently as possible.
 
-Mac users should at the very least buy an external hard drive, and set up the built-in backup software known as Time Machine. Once set up, the Time Machine backups are fully automated and do not require user interaction. Laptop users should opt to buy a Time Machine compatible <acronym title="Network Attahed Storage">NAS</acronym> drive so they won't need to plug anything to their computer in order to perform backup.
+Mac users should at the very least buy an external hard drive, and set up the built-in backup software known as Time Machine. Once set up, the Time Machine backups are fully automated and do not require user interaction. Laptop users should opt to buy a Time Machine compatible NAS[^3] drive so they won't need to plug anything to their computer in order to perform backup.
 
 The problem with the Time Machine is that it only backs up your computer to a single place, and that place usually lives in the same room as your computer. So in case of a fire, burglary or another disaster both your computer and your backup drive can be lost at the same time.
 
@@ -55,3 +55,7 @@ Regardless of what strategy and software approach you choose, please remember th
 [3]: http://www.crashplan.com
 [4]: https://www.dropbox.com/
 [5]: https://www.google.com/intl/en_US/drive/start/
+
+[^1]: Solid State Drive.
+[^2]: Network Attached Storage.
+[^3]: There exist SSD models that are not flash based and therefore do not have this limitation.

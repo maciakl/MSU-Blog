@@ -114,3 +114,11 @@ td {
 .above-footer a:active {
     color: blue;
 }
+
+.footnotes {
+    font-size: 11px;
+}
+
+.footnotes p {
+    display: inline;
+}
