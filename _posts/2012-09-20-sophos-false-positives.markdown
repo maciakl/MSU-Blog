@@ -26,6 +26,15 @@ This issue has been verified to affect Windows users. I'm not sure if it impacts
 
 Got a confirmation that, yes, MSU community is affected. Only Windows users may see this issue. As of yet, there seems to be no official fix, therefore the re-install workaround is probably the simplest route to resolve it for end users.
 
+**Update 2 (9/21/12)**
+
+The OIT sent out an official advisory email last night. They recommend holding off on attempts to fix this issue yourself:
+
+*There is no immediate action you need to take at this time. Information Technology has evaluated the problem and is currently testing a solution based in part on Sophos's own published suggested fixes. We will be coordinating efforts with Sophos, Inc. and the technology support teams in the various colleges to implement the solution as soon as possible.*
+
+So they are aware of the issue, are working to resolve it. I recommend watching your MSU email for follow-up instructions.
+
+
 [1]: http://community.sophos.com/t5/Sophos-Endpoint-Protection/Is-any-one-else-seing-this-alert-Shh-Updater-B-False-positives/td-p/29723
 [2]: http://www.reddit.com/r/sysadmin/comments/105mdt/sophos_antivirus_update_causing_false_positives/
 [3]: https://www.montclair.edu/oit/software/repository/
