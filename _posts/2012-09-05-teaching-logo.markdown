@@ -41,7 +41,15 @@ Of course, tortue is not without it's flaws. One of the biggest problems with th
 
 The interpreter is a bit temperamental at times and sometimes the RUN button becomes grayed out. I'm not entirely sure why that happens, but pushing the refresh button usually resolves the issue. This is something to watch for, and it is best mentioned before students start working with the software.
 
-Since Tortue does not clear the canvas or reset the pointer position between runs, it is usually a good idea to tell students to start every program with the `CLEAR` command to begin with a clean slate. Granted, this is not actually a Tortue flaw, but rather LOGO design choice. Still, `CLEAR` will make everyone's life much easier.
+Since Tortue does not clear the canvas or reset the pointer position between runs, it is usually a good idea to tell students to start every program with the `NEW` command to begin with a clean slate. Granted, this is not actually a Tortue flaw, but rather LOGO design choice. Still, `NEW` will make everyone's life much easier.
+
+By default, Tortue puts you in the middle of the canvas. The exact position of that point is dependent on the size of the window. Resizing it, will change the location of `HOME`. When students attempt to draw shapes and use `SETX` and `SETY` to align things, they often become confused when things shift around after they maximize their window, or resize it slightly. I find it a good practice to recommend that all programs start with the following boilerplate:
+
+    NEW
+    SETX 200
+    SETY 200
+    
+This orients the pointer at a known point, and prevents the drawings from shifting around when the window is resized.
 
 Finally, Tortue does not auto-save anything. It is possible for a student to close the window and lose all their work. I like to mention this at the beginning of the lab, and often suggest copy-pasting the program into notepad as a "backup".
 
