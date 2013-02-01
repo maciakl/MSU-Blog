@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 
 <html>
 	<head>
-		<title>{% if page.title %} {{ page.title }} | {% endif %} I teach 109</title>
+	    <meta charset="utf-8">
+        <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
         <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
         <link rel="icon" href="{{site.baseurl}}/favicon.ico" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
@@ -25,9 +25,8 @@
 
 	<body>
 		<div id="header">
-			<h1>I teach 109</h1>
-            <h4>My name is Luke, I teach CMPT-109 at Montclair State University
-                and this is my blog.</h4>
+            <h1>{{ site.name }}</h1>
+            <h4>{{ site.description }}</h4>
 			<hr />
 		</div>
 

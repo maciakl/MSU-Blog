@@ -70,6 +70,10 @@ td {
 	width: 100%;
 }
 
+.big {
+    font-size: large;
+}
+
 .post {
 	margin: 10px;
 }

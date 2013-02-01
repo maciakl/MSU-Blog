@@ -1,0 +1,9 @@
+{
+  "author": "Luke Maciak",
+  "name": "ITeach109",
+  "version": "109.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-html": "~0.2.x"
+  }
+}
