@@ -42,13 +42,8 @@ Also, note that I specified the `noauto` option. This means your system will not
 
     mount ~/msuweb
 
-You will then be prompted for your NetID username and password. If you want to skip this step, edit `/etc/davfs2/secrets` and add the following line to it:
+You will then be prompted for your NetID username and password. ~~If you want to skip this step, you can add your login info to `/etc/davfs2/secrets`~~ (this actually doesn't work for MSUWEB).
 
-    <url> <netid-username> <netid-password>
-
-Where `<url>` is once again the OIT provided one: `https://msuwebdav.montclair.edu/pubweb_vol1/<NETID>`.
-
-This should get you up and running. If you get file permission error, please check your `/etcfstab` line, and make sure the `uid` and `gid` correspond to the username which you are using to mount the drive.
 
 [1]: http://savannah.nongnu.org/projects/davfs2
 [2]: {{site.baseurl}}/technical-resource/2012/09/03/msuweb-locking-files/
