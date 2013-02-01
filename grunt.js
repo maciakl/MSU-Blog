@@ -3,12 +3,12 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    watch: {
-      files: ['_site/**/!(google*).html'],
-      tasks: 'htmllint'
-    },
     htmllint: {
         files: '_site/**/!(google*).html'
+    },
+    watch: {
+        files: '<config:htmllint.files>',
+        tasks: 'htmllint'
     }
   });
 
