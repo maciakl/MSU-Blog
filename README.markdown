@@ -31,7 +31,11 @@ On windows it works out of the box:
 Building and Development
 ---
 
-To do a quick one-time build and lint use:
+Before you do anything run this in the project directory to grab grunt plugins you need:
+
+    npm install
+
+Now you should be ready to go. To do a quick one-time build and lint use:
 
     rake
 
