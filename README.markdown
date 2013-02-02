@@ -39,6 +39,12 @@ Now you should be ready to go. To do a quick one-time build and lint use:
 
     rake
 
+To create a new post dated with today's date run:
+
+    rake new
+
+Then type in the title of the post when prompted. This will create an appropriately named template file in the `_posts` directory.
+
 For development use two windows (or tmux split screen) and run these commands side by side
 
     jekyll --server

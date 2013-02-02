@@ -24,5 +24,13 @@ task :deploy do
     end
 end
 
+task :new do
+    puts "Enter post-title-like-this: "
+    title = STDIN.gets.gsub(" ", "-").strip.downcase
+    filename = ''+Time.new.strftime('%Y-%m-%d-')+title+".markdown"
+    puts "Creating "+filename
+    cp '_posts/template.markdown', '_posts/'+filename
+end
+
 task :default => [:build, :lint]
 
