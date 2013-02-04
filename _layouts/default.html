@@ -4,23 +4,11 @@
 	<head>
 	    <meta charset="utf-8">
         <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
-        <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
         <link rel="icon" href="{{site.baseurl}}/favicon.ico" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
 
-        <!-- Google Analytics -->
-            <script type="text/javascript">
-              var _gaq = _gaq || [];
-              _gaq.push(['_setAccount', 'UA-34814673-1']);
-              _gaq.push(['_trackPageview']);
-
-              (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-              })();
-            </script>
-
+        <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
+        <link rel="stylesheet" href="{{site.baseurl}}/lib/highlight.css" />
 	</head>
 
 	<body>
@@ -49,7 +37,7 @@
 				<li><a href="http://cs.montclair.edu">CS Dept</a></li>
 				<li><a href="http://montclair.edu">Montclair State</a></li>
 			</ul>
-		</div>
+        </div>
 
 		<div id="content">
 
@@ -63,6 +51,24 @@
             <small>Validates as <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fmsuweb.montclair.edu%2F~maciakl%2Fblog%2F">
                     HTML5</a></small></p>
 		</div>
+
+        <!-- Javascript Sectoon -->
+
+        <!-- Google Analytics -->
+            <script type="text/javascript">
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-34814673-1']);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+          </script>
+
+          <script src="{{site.baseurl}}/lib/highlight.js"></script>
+          <script>hljs.initHighlightingOnLoad();</script>
 
 	</body>
 

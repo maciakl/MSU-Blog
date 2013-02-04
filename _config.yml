@@ -1,13 +1,13 @@
 name: I teach 109
-description: My name is Luke, I teach CMPT-109 at Montclair State University and this is my blog.
+description: I'm Luke, I teach CMPT-109 at Montclair State University and this is my blog.
 
 baseurl: /~maciakl/blog
 url: http://msuweb.montclair.edu/~maciakl/blog
 
 category_dir: /
-exclude: README.markdown, deploy.sh, deploy.cmd, grunt.js, package.json, node_modules, Rakefile
+exclude: README.markdown, component.json, grunt.js, package.json, node_modules, Rakefile
 
 auto: true
 permalink: pretty
 
-markdown: rdiscount
+markdown: kramdown

@@ -8,13 +8,19 @@ body {
   padding-right: 20%;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
     font-family: 'Quantico', sans-serif;
+	min-width: 800px;
+}
+
+hr {
+	min-width: 800px;
 }
 
 h1 {
     font-weight: 700;
     font-size: 400%;
+    margin-bottom: 0;
 }
 
 code {
@@ -44,7 +50,7 @@ td {
 
 #content {
 
-	width: 65%;
+	width: 75%;
 	min-width: 600px;
 	margin-left: 200px;
 }
@@ -68,10 +74,6 @@ td {
 #footer {
 	clear: both;
 	width: 100%;
-}
-
-.big {
-    font-size: large;
 }
 
 .post {
@@ -125,4 +127,12 @@ td {
 
 .footnotes p {
     display: inline;
+}
+
+
+@media print {
+
+    #sidebar { display: none; }
+    #content { margin-left: 0px; }
+    #footer { display: none; }
 }
