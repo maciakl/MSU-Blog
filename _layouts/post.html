@@ -6,9 +6,9 @@ layout: default
 
     <h2>{{ page.title }}</h2>
 
-    <span class="date">{{ page.date | date_to_string }}</span><br>
+    <span class="date"><i class="icon-clock"></i>{{ page.date | date_to_string }}</span><br>
 
-    <span class="category">{{ page.categories | category_links }}</span>
+    <span class="category"><i class="icon-tag"></i>{{ page.categories | category_links }}</span>
 
 	<div class="entry">{{ content }}</div>
 

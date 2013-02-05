@@ -1,26 +1,30 @@
 IS_WINDOWS = (RUBY_PLATFORM =~ /mingw/i) ? true : false
+WINPATH = "x:/blog"
+LINPATH = "/remote/msuweb/blog"
 
 task :build do
     sh "jekyll --no-auto"
 end
 
-task :lint => [:build] do
+task :lint => [:build, :html5compliance] do
     sh "grunt htmllint"
 end
 
 task :windeploy do
-    sh "jekyll --no-auto x:/blog"
+    sh "jekyll --no-auto " + WINPATH
 end
 
 task :lindeploy do
-    sh "jekyll --no-auto /remote/msuweb/blog"
+    sh "jekyll --no-auto " + LINPATH
 end
 
 task :deploy do
     if(IS_WINDOWS)
         Rake::Task["windeploy"].execute
+        Rake::Task["html5compliance"].invoke(WINPATH)
     else
         Rake::Task["lindeploy"].execute
+        Rake::Task["html5compliance"].invoke(LINPATH)
     end
 end
 
@@ -32,5 +36,21 @@ task :new do
     cp '_posts/template.markdown', '_posts/'+filename
 end
 
-task :default => [:build, :lint]
+
+task :html5compliance, :dest do |t, args|
+
+    dest = (args[:dest] == nil) ? "_site" : args[:dest]
+    puts "Starting build task for destination: " + dest
+    files = FileList[dest+"/**/*.html"]
+
+    files.each do |f|
+        # replace rel="footnote" with data-fn="footnote"
+        # replace rel="reference" with data-fn="reference"
+        sh "sed 's/rel=\"footnote\"/data-fn=\"footnote\"/g' -i " + f
+        sh "sed 's/rel=\"reference\"/data-fn=\"reference\"/g' -i " + f
+
+    end
+end
+
+task :default => [:build, :html5compliance, :lint]
 

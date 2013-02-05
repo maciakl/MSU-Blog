@@ -14,7 +14,8 @@ h1,h2,h3,h4 {
 }
 
 hr {
-	min-width: 800px;
+	width: 1000px;
+	min-width: 840px;
 }
 
 h1 {
@@ -49,6 +50,16 @@ td {
     padding-left: 20px;
 }
 
+a {
+    font-family: 'Quantico', Sans-Serif;
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: #666 1px 1px 2px;
+}
+
 #content {
 
 	width: 85%;
@@ -64,11 +75,18 @@ td {
 
 #sidebar a:visited,
 #sidebar a:active {
-    color: blue;
+    color: #000;
 }
 
 #sidebar a:hover {
-    color: blue;
+    color: #333;
+}
+
+#sidebar ul {
+    padding-left: 5px;
+}
+#sidebar li {
+    list-style: none;
 }
 
 
@@ -105,45 +123,27 @@ td {
 	color: gray;
 }
 
-a.readme {
-    padding-left: 15px;
-    padding-right: 15px;
-    background: #fff;
-    text-decoration: none;
-    font-family: 'Quantico', Sans-Serif;
-    color: #000;
-    box-shadow: #666 1px 1px 5px;
-}
-
 a.readme:hover {
-    background: #ddd;
 }
 
 a.readme:active {
-    top: 1px;
+    padding-left: 3px;
 }
 
 
 .category a:link, 
 .category a:visited, 
 .category a:active { 
-    color: gray;
-    text-decoration: none;
-    text-shadow: #666 1px 1px 2px;
-
+    font-family: 'Electrolyze', Sans-Serif;
+    color: #696969;
 }
 
 .category a:hover {
-
+    text-shadow: #666 1px 1px 2px;
 }
 
 .above-footer {
     margin-left: 80%;
-}
-
-.above-footer a:visited,
-.above-footer a:active {
-    color: blue;
 }
 
 .footnotes {
@@ -154,10 +154,10 @@ a.readme:active {
     display: inline;
 }
 
-
 @media print {
 
     #sidebar { display: none; }
     #content { margin-left: 0px; }
     #footer { display: none; }
 }
+
