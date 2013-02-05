@@ -20,7 +20,8 @@ hr {
 h1 {
     font-weight: 700;
     font-size: 400%;
-    margin-bottom: 0;
+    margin-bottom: -15px;
+    padding-bottom: 0;
 }
 
 code {
@@ -50,8 +51,8 @@ td {
 
 #content {
 
-	width: 75%;
-	min-width: 600px;
+	width: 85%;
+	min-width: 640px;
 	margin-left: 200px;
 }
 
@@ -104,12 +105,36 @@ td {
 	color: gray;
 }
 
+a.readme {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #fff;
+    text-decoration: none;
+    font-family: 'Quantico', Sans-Serif;
+    color: #000;
+    box-shadow: #666 1px 1px 5px;
+}
+
+a.readme:hover {
+    background: #ddd;
+}
+
+a.readme:active {
+    top: 1px;
+}
+
 
 .category a:link, 
 .category a:visited, 
 .category a:active { 
     color: gray;
     text-decoration: none;
+    text-shadow: #666 1px 1px 2px;
+
+}
+
+.category a:hover {
+
 }
 
 .above-footer {
