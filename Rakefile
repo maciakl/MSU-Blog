@@ -34,6 +34,7 @@ task :new do
     filename = ''+Time.new.strftime('%Y-%m-%d-')+title+".markdown"
     puts "Creating "+filename
     cp '_posts/template.markdown', '_posts/'+filename
+    sh 'gvim ' + '_posts/'+filename
 end
 
 
