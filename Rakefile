@@ -21,7 +21,7 @@ end
 task :deploy =>[:commit] do
     if(IS_WINDOWS)
         Rake::Task["windeploy"].execute
-        Rake::Task["html5compliance"].invoke(WINPATH)
+        #Rake::Task["html5compliance"].invoke(WINPATH)
     else
         Rake::Task["lindeploy"].execute
         Rake::Task["html5compliance"].invoke(LINPATH)
