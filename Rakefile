@@ -47,8 +47,8 @@ task :html5compliance, :dest do |t, args|
     files.each do |f|
         # replace rel="footnote" with data-fn="footnote"
         # replace rel="reference" with data-fn="reference"
-        sh "sed 's/rel=\"footnote\"/data-fn=\"footnote\"/g' -i " + f
-        sh "sed 's/rel=\"reference\"/data-fn=\"reference\"/g' -i " + f
+        sh "sed \"s/rel=\\\"footnote\\\"/data-fn=\\\"footnote\\\"/g\" -i " + f
+        sh "sed \"s/rel=\\\"reference\\\"/data-fn=\\\"reference\\\"/g\" -i " + f
 
     end
 end
