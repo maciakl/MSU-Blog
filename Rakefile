@@ -67,7 +67,7 @@ task :html5compliance, :dest do |t, args|
     end
 end
 
-task :commit do
+task :commit => [:build, :html5compliance] do
     puts "Running automated repository commit task..."
 
     sh "git add ."
