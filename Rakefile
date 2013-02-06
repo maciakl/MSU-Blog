@@ -4,6 +4,7 @@ LINPATH = "/remote/msuweb"
 FOLDER = "/blog"
 
 task :build do
+    puts "Running build task..."
     sh "jekyll --no-auto"
 end
 
@@ -12,6 +13,9 @@ task :lint => [:build, :html5compliance] do
 end
 
 task :windeploy => [:buid, :html5compliance] do
+    puts "Deploying the site from windows..."
+    puts "The target path is: "+WINPATH+FOLDER
+
     #sh "jekyll --no-auto " + WINPATH + FOLDER
     rm_rf(WINPATH+FOLDER)
     cp_r("_site", WINPATH)
@@ -19,6 +23,9 @@ task :windeploy => [:buid, :html5compliance] do
 end
 
 task :lindeploy => [:build, :html5compliance] do
+    puts "Deploying the site from Linux..."
+    puts "The target path is: "+LINPATH+FOLDER
+
     #sh "jekyll --no-auto " + LINPATH + FOLDER
     rm_rf(LINPATH+FOLDER)
     cp_r("_site", LINPATH)
@@ -29,10 +36,8 @@ end
 task :deploy =>[:commit] do
     if(IS_WINDOWS)
         Rake::Task["windeploy"].execute
-        #Rake::Task["html5compliance"].invoke(WINPATH)
     else
         Rake::Task["lindeploy"].execute
-        #Rake::Task["html5compliance"].invoke(LINPATH)
     end
 end
 
@@ -47,6 +52,7 @@ end
 
 
 task :html5compliance, :dest do |t, args|
+    puts "Running HTML5 Compliance task..."
 
     dest = (args[:dest] == nil) ? "_site" : args[:dest]
     puts "Starting build task for destination: " + dest
@@ -62,9 +68,10 @@ task :html5compliance, :dest do |t, args|
 end
 
 task :commit do
+    puts "Running automated repository commit task..."
 
     sh "git add ."
-    sh "git commit -a -m \"Commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")\""
+    sh "git commit -a -m \"Auto-commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")\""
     sh "git push"
 end
 
