@@ -1,6 +1,7 @@
 IS_WINDOWS = (RUBY_PLATFORM =~ /mingw/i) ? true : false
-WINPATH = "x:/blog"
-LINPATH = "/remote/msuweb/blog"
+WINPATH = "x:"
+LINPATH = "/remote/msuweb"
+FOLDER = "/blog"
 
 task :build do
     sh "jekyll --no-auto"
@@ -10,12 +11,19 @@ task :lint => [:build, :html5compliance] do
     sh "grunt htmllint"
 end
 
-task :windeploy do
-    sh "jekyll --no-auto " + WINPATH
+task :windeploy => [:buid, :html5compliance] do
+    #sh "jekyll --no-auto " + WINPATH + FOLDER
+    rm_rf(WINPATH+FOLDER)
+    cp_r("_site", WINPATH)
+    mv(WINPATH+"/_site", WINPATH+FOLDER)
 end
 
-task :lindeploy do
-    sh "jekyll --no-auto " + LINPATH
+task :lindeploy => [:build, :html5compliance] do
+    #sh "jekyll --no-auto " + LINPATH + FOLDER
+    rm_rf(LINPATH+FOLDER)
+    cp_r("_site", LINPATH)
+    mv(LINPATH+"/_site", LINPATH+FOLDER)
+
 end
 
 task :deploy =>[:commit] do
@@ -24,7 +32,7 @@ task :deploy =>[:commit] do
         #Rake::Task["html5compliance"].invoke(WINPATH)
     else
         Rake::Task["lindeploy"].execute
-        Rake::Task["html5compliance"].invoke(LINPATH)
+        #Rake::Task["html5compliance"].invoke(LINPATH)
     end
 end
 
