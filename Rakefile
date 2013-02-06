@@ -18,7 +18,7 @@ task :lindeploy do
     sh "jekyll --no-auto " + LINPATH
 end
 
-task :deploy do
+task :deploy =>[:commit] do
     if(IS_WINDOWS)
         Rake::Task["windeploy"].execute
         Rake::Task["html5compliance"].invoke(WINPATH)
