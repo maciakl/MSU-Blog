@@ -53,5 +53,12 @@ task :html5compliance, :dest do |t, args|
     end
 end
 
+task :commit do
+
+    sh "git add ."
+    sh "git commit -a -m \"Commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")\""
+    sh "git push"
+end
+
 task :default => [:build, :html5compliance, :lint]
 
