@@ -55,7 +55,6 @@ task :html5compliance, :dest do |t, args|
     puts "Running HTML5 Compliance task..."
 
     dest = (args[:dest] == nil) ? "_site" : args[:dest]
-    puts "Starting build task for destination: " + dest
     files = FileList[dest+"/**/*.html"]
 
     files.each do |f|
