@@ -76,4 +76,3 @@ task :commit => [:build, :html5compliance] do
 end
 
 task :default => [:build, :html5compliance, :lint]
-
