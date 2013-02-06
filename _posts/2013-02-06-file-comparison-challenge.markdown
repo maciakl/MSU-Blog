@@ -4,6 +4,7 @@ title: File Comparison Challenge
 category: student-resource
 
 excerpt: Can you quickly determine the differences between two documents? This challenge tests your general computer knowledge, problem solving skills and ability to research technology issues.
+
 ---
 
 This is a challenge assignment, which means you may or may not be able to accomplish it. Approach it as you would a puzzle interview question. It doesn't matter if you actually fail at the task, it matters how you go about solving it.
