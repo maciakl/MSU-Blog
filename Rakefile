@@ -5,15 +5,18 @@ WINPATH = "x:"
 LINPATH = "/remote/msuweb"
 FOLDER = "/blog"
 
+desc "Build using jekyll --no-auto"
 task :build do
     puts "Running build task..."
     sh "jekyll --no-auto"
 end
 
+desc "Lint using grunt htmllint"
 task :lint => [:build, :html5compliance] do
     sh "grunt htmllint"
 end
 
+desc "Deploy on Windows (uses build, html5compliance)"
 task :windeploy => [:buid, :html5compliance] do
     puts "Deploying the site from windows..."
     puts "The target path is: "+WINPATH+FOLDER
@@ -24,6 +27,7 @@ task :windeploy => [:buid, :html5compliance] do
     mv(WINPATH+"/_site", WINPATH+FOLDER)
 end
 
+desc "Deploy on Linux (uses build, html5compliance)"
 task :lindeploy => [:build, :html5compliance] do
     puts "Deploying the site from Linux..."
     puts "The target path is: "+LINPATH+FOLDER
@@ -35,6 +39,7 @@ task :lindeploy => [:build, :html5compliance] do
 
 end
 
+desc "Autodetect platform and deoploy (uses commit)"
 task :deploy =>[:commit] do
     if(IS_WINDOWS)
         Rake::Task["windeploy"].execute
@@ -43,6 +48,7 @@ task :deploy =>[:commit] do
     end
 end
 
+desc "Creates a new post in _posts directory"
 task :new do
     puts "Enter post-title-like-this: "
     title = STDIN.gets.gsub(" ", "-").strip.downcase
@@ -52,7 +58,7 @@ task :new do
     sh 'gvim ' + '_posts/'+filename
 end
 
-
+desc "Fixes footnote notation to conform to HTML5"
 task :html5compliance, :dest do |t, args|
     puts "Running HTML5 Compliance task..."
 
@@ -71,6 +77,7 @@ task :html5compliance, :dest do |t, args|
     end
 end
 
+desc "Builds the site, ensures compliance and pushes it to github"
 task :commit => [:build, :html5compliance] do
     puts "Running automated repository commit task..."
 
@@ -79,4 +86,5 @@ task :commit => [:build, :html5compliance] do
     sh "git push"
 end
 
+desc "Build, ensure html5 compliance then lint"
 task :default => [:build, :html5compliance, :lint]
