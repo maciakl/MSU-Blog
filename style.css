@@ -10,14 +10,14 @@ body {
 
 h1,h2,h3,h4 {
     font-family: 'Quantico', sans-serif;
-	min-width: 800px;
+    min-width: 800px;
 }
 
 hr {
     margin-left: 0;
     padding-left: 0;
-	width: 100%;
-	min-width: 840px;
+    width: 100%;
+    min-width: 840px;
 }
 
 h1 {
@@ -31,13 +31,14 @@ code {
     background-color: #E8E8E8;
     padding-left: 3px;
     padding-right: 3px;
+    overflow: auto;
 }
 
 pre {
     background-color: #E8E8E8;
     margin-left: 30px;
+    margin-right: 30px;
     padding: 5px;
-    width: 80%;
 }
 
 strong, em {
@@ -64,41 +65,41 @@ a:hover {
 
 #content {
 
-	width: 85%;
-	min-width: 640px;
-	margin-left: 200px;
+    width: 85%;
+    min-width: 640px;
+    margin-left: 200px;
 }
 
-#sidebar {
-	float: left;
-	width: 200px;
-	min-width: 200px;
+nav {
+    float: left;
+    width: 200px;
+    min-width: 200px;
 }
 
-#sidebar a:visited,
-#sidebar a:active {
+nav a:visited,
+nav a:active {
     color: #000;
 }
 
-#sidebar a:hover {
+nav a:hover {
     color: #333;
 }
 
-#sidebar ul {
+nav ul {
     padding-left: 5px;
 }
-#sidebar li {
+nav li {
     list-style: none;
 }
 
 
-#footer {
-	clear: both;
-	width: 100%;
+footer {
+    clear: both;
+    width: 100%;
 }
 
-.post {
-	margin: 10px;
+article {
+    margin: 10px;
 }
 
 .date {
@@ -106,8 +107,8 @@ a:hover {
 }
 
 .entry {
-	margin-left: 10px;
-	padding: 10px;
+    margin-left: 10px;
+    padding: 10px;
 }
 
 .entry li {
@@ -121,8 +122,8 @@ a:hover {
 }
 
 .meta {
-	padding-top: 10px;
-	color: gray;
+    padding-top: 10px;
+    color: gray;
 }
 
 a.readme:hover {
@@ -158,8 +159,8 @@ a.readme:active {
 
 @media print {
 
-    #sidebar { display: none; }
+    nav { display: none; }
     #content { margin-left: 0px; }
-    #footer { display: none; }
+    footer { display: none; }
 }
 
