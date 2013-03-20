@@ -69,6 +69,8 @@ You may ask yourself how to edit this file again, now that it opens in a web bro
 
 If you want to see the HTML code again, simply open Notepad, and use the File->Open menu to open up your file. Note how the Web Browser automatically "renders" the contents of the file by hiding all the tags, whereas notepad displays them.
 
+If you are a mac user, you can use TextEdit instead of notepad. Please note however that you will need to configure it before you start working. Please follow [these instructions][tx] to allow TextEdit to display HTML files properly.
+
 ###White Space
 
 Since you have worked with Markdown already, this should be familiar. Web browsers will ignore all "white space" in your document, except single spaces in between words. White Space is the colloquial term we use to refer to things like spaces, tabs and line breaks. For example word you can align two words by simply using spaces or tabs, but this will not work with HTML.
@@ -366,19 +368,19 @@ You can learn more about CSS by reading the [W3C Tutorials][css].
 
 Your assignment is to create a simple HTML page. The topic matter is up to you. Your page must include:
 
-- Valid HTML boilerplate including DOCTYPE
-- A header and footer with content.
-- At least 3 sections, each including a heading and 1-2 paragraphs of text.
-- An image.
+- Valid HTML5 including the correct DOCTYPE.
+- A header and footer with content and at least 3 sections or articles, each including a heading and 1-2 paragraphs of text.
+- At least one image image with alt tags.
 - A list.
 - At least one CSS rule.
 
 For additional credit, please try the following:
 
-- Use a HTML table
-- Create CSS rules that use complex selectors (child tags, id's, classes)
+- Use a HTML table.
+- Create CSS rules that use complex selectors (id's, classes, etc..).
 
 Please refer to Blackboard for instructions how to submit this assignment.
 
+[tx]: {{site.baseurl}}/student-resource/2013/03/17/using-textedit-for-html/
 [cc]: http://www.computerhope.com/htmcolor.htm
 [css]: http://www.w3schools.com/css/ 
