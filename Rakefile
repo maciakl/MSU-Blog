@@ -17,7 +17,7 @@ task :lint => [:build, :html5compliance] do
 end
 
 desc "Deploy on Windows (uses build, html5compliance)"
-task :windeploy => [:buid, :html5compliance] do
+task :windeploy => [:build, :html5compliance] do
     puts "Deploying the site from windows..."
     puts "The target path is: "+WINPATH+FOLDER
 
