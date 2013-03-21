@@ -2,19 +2,19 @@
 layout: default
 title: Archive
 ---
-<article>
-    <h2>Archive</h2>
+    <section>
+        <h2>Archive</h2>
 
-    <div class="entry">
-        <table>
-            {% for post in site.posts %}
-            <tr>
-                <td><i class="icon-clock"></i><span class="date">{{ post.date | date_to_string }}</span></td>  
-                <td><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></td>
-                <td><span class="category"><small><i class="icon-tag"></i>{{post.categories | category_links}}</small></span></td>
-            </tr>
-        {% endfor %}
-        </table>
-    </div>
+        <div class="entry">
+            <table>
+                {% for post in site.posts %}
+                <tr>
+                    <td><i class="icon-clock"></i><span class="date">{{ post.date | date_to_string }}</span></td>  
+                    <td><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></td>
+                    <td><span class="category"><small><i class="icon-tag"></i>{{post.categories | category_links}}</small></span></td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
 
-</article>
+    </section>

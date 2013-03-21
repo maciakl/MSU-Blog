@@ -13,14 +13,15 @@ h1,h2,h3,h4 {
     min-width: 800px;
 }
 
-hr {
+body header hr,
+body footer hr{
     margin-left: 0;
     padding-left: 0;
     width: 100%;
     min-width: 840px;
 }
 
-h1 {
+body header h1 {
     font-weight: 700;
     font-size: 400%;
     margin-bottom: -15px;
@@ -49,18 +50,21 @@ table {
     border: none;
 }
 
-td {
+th, td {
     padding-left: 20px;
 }
 
 a {
     font-family: 'Quantico', Sans-Serif;
     color: #000;
-    text-decoration: underline;
 }
 
 a:hover {
     text-shadow: #666 1px 1px 2px;
+}
+
+section a {
+    text-decoration: none;
 }
 
 main {
@@ -97,46 +101,46 @@ nav li {
 }
 
 
-footer {
+body>footer {
     clear: both;
     width: 100%;
 }
 
-article {
+article, section {
     margin: 10px;
 }
 
-.date {
+time {
     font-family: 'Electrolize', sans-serif;
 }
 
-.entry {
+article div {
     margin-left: 10px;
     padding: 10px;
 }
 
-.entry li {
+article div li {
     padding-bottom: 5px;
 }
 
-.entry img {
+article div img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.meta {
+article footer {
     padding-top: 10px;
     color: gray;
 }
 
-a.readme,
-a.readme:hover,
-a.readme:active {
+article footer a,
+article footer a:hover,
+article footer a:active {
     text-decoration: none;
 }
 
-a.readme:active {
+article footer a:active {
     padding-left: 3px;
 }
 
@@ -154,7 +158,7 @@ a.readme:active {
     text-decoration: none;
 }
 
-.above-footer {
+#more {
     margin-left: 80%;
 }
 
@@ -169,7 +173,6 @@ a.readme:active {
 @media print {
 
     nav { display: none; }
-    #content { margin-left: 0px; }
+    main { margin-left: 0px; }
     footer { display: none; }
 }
-

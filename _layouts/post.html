@@ -2,17 +2,17 @@
 layout: default
 ---
 
-<article>
+    <article>
+        <header>
+            <h2>{{ page.title }}</h2>
+            <time><i class="icon-clock"></i>{{ page.date | date_to_string }}</time><br>
+            <span class="category"><i class="icon-tag"></i>{{ page.categories | category_links }}</span>
+        </header>
 
-    <h2>{{ page.title }}</h2>
+    	<div>{{ content }}</div>
 
-    <span class="date"><i class="icon-clock"></i>{{ page.date | date_to_string }}</span><br>
+        <footer>
+            <small>By Luke Maciak &copy; {{page.date | date: "%Y"}}</small>
+        </footer>
 
-    <span class="category"><i class="icon-tag"></i>{{ page.categories | category_links }}</span>
-
-	<div class="entry">{{ content }}</div>
-
-    <span class="meta"><small>By Luke Maciak &copy; {{page.date | date: "%Y"}}</small></span>
-
-</article>
-
+    </article>
