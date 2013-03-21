@@ -9,7 +9,7 @@ title: Home
             {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
             <header>
             <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
-                <span><i class="icon-clock"></i><time>{{ post.date | date_to_string }}</time></span>
+            <span><i class="icon-clock"></i><time datetime="{{post.date | date: "%F"}}">{{ post.date | date: "%b %d, %Y" }}</time></span>
             </header>
 
             <div>{{ post.excerpt }}</div>
