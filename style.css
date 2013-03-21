@@ -56,18 +56,19 @@ td {
 a {
     font-family: 'Quantico', Sans-Serif;
     color: #000;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
     text-shadow: #666 1px 1px 2px;
 }
 
-#content {
+main {
 
     width: 85%;
     min-width: 640px;
     margin-left: 200px;
+    display: block;
 }
 
 nav {
@@ -76,13 +77,16 @@ nav {
     min-width: 200px;
 }
 
+nav a,
 nav a:visited,
 nav a:active {
     color: #000;
+    text-decoration: none;
 }
 
 nav a:hover {
     color: #333;
+    text-decoration: none;
 }
 
 nav ul {
@@ -126,7 +130,10 @@ article {
     color: gray;
 }
 
-a.readme:hover {
+a.readme,
+a.readme:hover,
+a.readme:active {
+    text-decoration: none;
 }
 
 a.readme:active {
@@ -139,10 +146,12 @@ a.readme:active {
 .category a:active { 
     font-family: 'Electrolyze', Sans-Serif;
     color: #696969;
+    text-decoration: none;
 }
 
 .category a:hover {
     text-shadow: #666 1px 1px 2px;
+    text-decoration: none;
 }
 
 .above-footer {
