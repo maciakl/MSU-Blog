@@ -5,7 +5,7 @@ layout: default
     <article>
         <header>
             <h2>{{ page.title }}</h2>
-            <time><i class="icon-clock"></i>{{ page.date | date_to_string }}</time><br>
+            <span><i class="icon-clock"></i><time>{{ page.date | date_to_string }}</time></span><br>
             <span class="category"><i class="icon-tag"></i>{{ page.categories | category_links }}</span>
         </header>
 

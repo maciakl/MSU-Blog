@@ -8,14 +8,14 @@ title: Home
         <article>
             {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
             <header>
-                <h2>{{ post.title }}</h2>
-                <time><i class="icon-clock"></i>{{ post.date | date_to_string }}</time>
+            <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
+                <span><i class="icon-clock"></i><time>{{ post.date | date_to_string }}</time></span>
             </header>
 
             <div>{{ post.excerpt }}</div>
 
             <footer>
-                <a href="{{site.baseurl}}{{ post.url }}">Read More &raquo;</a>
+                <a href="{{site.baseurl}}{{post.url}}">Read More &raquo;</a>
             </footer>
         </article>
     {% endfor %}

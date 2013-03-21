@@ -14,7 +14,7 @@ h1,h2,h3,h4 {
 }
 
 body header hr,
-body footer hr{
+body footer hr {
     margin-left: 0;
     padding-left: 0;
     width: 100%;
@@ -26,6 +26,11 @@ body header h1 {
     font-size: 400%;
     margin-bottom: -15px;
     padding-bottom: 0;
+}
+
+body>footer {
+    clear: both;
+    width: 100%;
 }
 
 code {
@@ -63,17 +68,10 @@ a:hover {
     text-shadow: #666 1px 1px 2px;
 }
 
-section a {
-    text-decoration: none;
+a:active {
+    margin-left: 3px;
 }
 
-main {
-
-    width: 85%;
-    min-width: 640px;
-    margin-left: 200px;
-    display: block;
-}
 
 nav {
     float: left;
@@ -100,18 +98,29 @@ nav li {
     list-style: none;
 }
 
+main {
 
-body>footer {
-    clear: both;
-    width: 100%;
+    width: 85%;
+    min-width: 640px;
+    margin-left: 200px;
+    display: block;
+}
+
+section a {
+    text-decoration: none;
+}
+
+section a:active {
+    margin-left: 0px;
 }
 
 article, section {
     margin: 10px;
 }
 
-time {
-    font-family: 'Electrolize', sans-serif;
+article header h2 a {
+    text-decoration: none;
+    color:#564b47;  
 }
 
 article div {
@@ -140,10 +149,9 @@ article footer a:active {
     text-decoration: none;
 }
 
-article footer a:active {
-    padding-left: 3px;
+time {
+    font-family: 'Electrolize', sans-serif;
 }
-
 
 .category a:link, 
 .category a:visited, 
@@ -173,6 +181,7 @@ article footer a:active {
 @media print {
 
     nav { display: none; }
-    main { margin-left: 0px; }
+    main { margin-left: 0px; width: 100%; }
     footer { display: none; }
+    code { overflow: visible; }
 }
