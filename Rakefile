@@ -36,7 +36,6 @@ task :lindeploy => [:build, :html5compliance] do
     rm_rf(LINPATH+FOLDER)
     cp_r("_site", LINPATH)
     mv(LINPATH+"/_site", LINPATH+FOLDER)
-
 end
 
 desc "Autodetect platform and deoploy (uses commit)"
