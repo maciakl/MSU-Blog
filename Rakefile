@@ -8,12 +8,12 @@ FOLDER = "/blog"
 desc "Build using jekyll --no-auto"
 task :build do
     puts "Running build task..."
-    sh "jekyll --no-auto"
+    sh "jekyll build"
 end
 
 desc "Lint using grunt htmllint"
 task :lint => [:build, :html5compliance] do
-    sh "grunt htmllint"
+    sh "grunt validation"
 end
 
 desc "Deploy on Windows (uses build, html5compliance)"
@@ -61,20 +61,21 @@ end
 desc "Fixes footnote notation to conform to HTML5"
 task :html5compliance, :dest do |t, args|
     puts "Running HTML5 Compliance task..."
+    puts "Skipping, deprecated."
 
     # because OSX sed is stupid
-    sed = IS_MAC ? "gsed" : "sed"
+    #sed = IS_MAC ? "gsed" : "sed"
 
-    dest = (args[:dest] == nil) ? "_site" : args[:dest]
-    files = FileList[dest+"/**/*.html"]
+    #dest = (args[:dest] == nil) ? "_site" : args[:dest]
+    #files = FileList[dest+"/**/*.html"]
 
-    files.each do |f|
+    #files.each do |f|
         # replace rel="footnote" with data-fn="footnote"
         # replace rel="reference" with data-fn="reference"
-        sh sed+" \"s/rel=\\\"footnote\\\"/data-fn=\\\"footnote\\\"/g\" -i " + f
-        sh sed+" \"s/rel=\\\"reference\\\"/data-fn=\\\"reference\\\"/g\" -i " + f
+        #sh sed+" \"s/rel=\\\"footnote\\\"/data-fn=\\\"footnote\\\"/g\" -i " + f
+        #sh sed+" \"s/rel=\\\"reference\\\"/data-fn=\\\"reference\\\"/g\" -i " + f
 
-    end
+    #end
 end
 
 desc "Builds the site, ensures compliance and pushes it to github"
