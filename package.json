@@ -2,10 +2,10 @@
   "author": "Luke Maciak",
   "name": "ITeach109",
   "repository": {
-          "type" : "git",
-          "url" : "https://github.com/maciakl/MSU-Blog.git"
+    "type": "git",
+    "url": "https://github.com/maciakl/MSU-Blog.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {},
   "devDependencies": {
     "grunt-html-validation": "~0.1.6",
