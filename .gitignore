@@ -2,5 +2,5 @@ _site
 components
 node_modules
 .DS_Store
-validation_report.json
-validation_status.json
+validation-report.json
+validation-status.json
