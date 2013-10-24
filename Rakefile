@@ -5,20 +5,34 @@ WINPATH = "x:"
 LINPATH = "/remote/msuweb"
 FOLDER = "/blog"
 
-desc "Build using jekyll --no-auto"
+# CHECK system
+desc "Check if all the tools are installed."
+task :check do
+  puts "Platform: "+ RUBY_PLATFORM
+  sh "ruby --version"
+  sh "gem --version"
+  sh "node --version"
+  sh "npm --version"
+  sh "jekyll --version"
+  sh "grunt --version"
+end
+
+# BUILD the website using jekyll
+desc "Build using jekyll build"
 task :build do
     puts "Running build task..."
     sh "jekyll build"
 end
 
-desc "Lint using grunt grunt-html-validation"
+# LINT
+desc "Lint using grunt-html-validation"
 task :lint => [:build] do
     sh "grunt validation"
 end
 
 
-
-desc "Deploy on Windows (uses build)"
+# DEPLOY - WINDOWS ONLY
+desc "Deploy on Windows"
 task :windeploy => [:build] do
     puts "Deploying the site from windows..."
     puts "The target path is: "+WINPATH+FOLDER
@@ -28,7 +42,8 @@ task :windeploy => [:build] do
     mv(WINPATH+"/_site", WINPATH+FOLDER)
 end
 
-desc "Deploy on Linux (uses build, html5compliance)"
+# DEPLOY - LINUX ONLY
+desc "Deploy on Linux"
 task :lindeploy => [:build, :html5compliance] do
     puts "Deploying the site from Linux..."
     puts "The target path is: "+LINPATH+FOLDER
@@ -40,8 +55,8 @@ end
 
 
 
-
-desc "Autodetect platform and deoploy (uses commit)"
+# DEPLOY - PLATFORM INDEPENDENT
+desc "Deploy. Tries to detect the platform. Might be wrong."
 task :deploy =>[:commit] do
     if(IS_WINDOWS)
         Rake::Task["windeploy"].execute
@@ -50,6 +65,7 @@ task :deploy =>[:commit] do
     end
 end
 
+# NEW POST
 desc "Creates a new post in _posts directory"
 task :new do
     puts "Enter post-title-like-this: "
@@ -60,35 +76,21 @@ task :new do
     sh 'gvim ' + '_posts/'+filename
 end
 
-#desc "Fixes footnote notation to conform to HTML5"
-#task :html5compliance, :dest do |t, args|
-    #puts "Running HTML5 Compliance task..."
-    #puts "Skipping, deprecated."
-
-    # because OSX sed is stupid
-    #sed = IS_MAC ? "gsed" : "sed"
-
-    #dest = (args[:dest] == nil) ? "_site" : args[:dest]
-    #files = FileList[dest+"/**/*.html"]
-
-    #files.each do |f|
-        # replace rel="footnote" with data-fn="footnote"
-        # replace rel="reference" with data-fn="reference"
-        #sh sed+" \"s/rel=\\\"footnote\\\"/data-fn=\\\"footnote\\\"/g\" -i " + f
-        #sh sed+" \"s/rel=\\\"reference\\\"/data-fn=\\\"reference\\\"/g\" -i " + f
-
-    #end
-#end
-
-desc "Builds the site, ensures compliance and pushes it to github"
+# COMMIT and INCREMENT VERSION
+desc "Commits all changes, increments version and attempts to push to github"
 task :commit => [:build] do
     puts "Running automated repository commit task..."
 
+    puts "Please enter commit message: "
+    msg = STDIN.gets
+
+    msg = "Auto-commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")" if msg.length < 3
     sh "git add ."
-    sh "git commit -a -m \"Auto-commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")\""
+    sh "git commit -a -m \"" +msg+ "\""
     sh "npm version patch"
     sh "git push"
 end
 
-desc "Build, then lint"
+# DEFAULT: BUILD AND LINT
+desc "Default task is to build the site, then lint it. Doesn't commit. Doesn't deploy."
 task :default => [:build, :lint]
