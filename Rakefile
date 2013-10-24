@@ -82,9 +82,9 @@ task :commit => [:build] do
     puts "Running automated repository commit task..."
 
     puts "Please enter commit message: "
-    msg = STDIN.gets
+    msg = STDIN.gets.strip!
 
-    msg = "Auto-commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")" if msg.length < 3
+    msg = "Auto-commited with Rake (" +Time.now.strftime("%Y-%m-%d")+ ")" if msg.empty?
     sh "git add ."
     sh "git commit -a -m \"" +msg+ "\""
     sh "npm version patch"
