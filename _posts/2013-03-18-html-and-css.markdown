@@ -313,7 +313,7 @@ Cascading Style Sheets are defined in a separate file with the extension `.css`.
 {% highlight html %}
 <head>
     <title>My Webpage</title>
-    <link type="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 {% endhighlight %}
 
