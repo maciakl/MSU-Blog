@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/maciakl/MSU-Blog.git"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "dependencies": {},
   "devDependencies": {
     "grunt-html-validation": "~0.1.6",
