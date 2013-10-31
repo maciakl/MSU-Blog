@@ -44,7 +44,7 @@ end
 
 # DEPLOY - LINUX ONLY
 desc "Deploy on Linux"
-task :lindeploy => [:build, :html5compliance] do
+task :lindeploy => [:build] do
     puts "Deploying the site from Linux..."
     puts "The target path is: "+LINPATH+FOLDER
 
