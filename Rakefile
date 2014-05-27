@@ -66,14 +66,51 @@ task :deploy =>[:commit] do
 end
 
 # NEW POST
-desc "Creates a new post in _posts directory"
+desc "Creates a new post in _drafts directory"
 task :new do
-    puts "Enter post-title-like-this: "
-    title = STDIN.gets.gsub(" ", "-").strip.downcase
-    filename = ''+Time.new.strftime('%Y-%m-%d-')+title+".markdown"
+
+    puts "Enter year (default "+Time.new.strftime('%Y')+"):"
+    year = STDIN.gets.strip!
+    puts "Enter month (default "+Time.new.strftime('%m')+"):"
+    month = STDIN.gets.strip!
+    puts "Enter day (default "+Time.new.strftime('%d')+"):"
+    day = STDIN.gets.strip!
+    puts "Enter category (default: resource):"
+    category = STDIN.gets.strip!
+    if year.empty? then year = Time.new.strftime('%Y') end
+    if month.empty? then month = Time.new.strftime('%m') end
+    if day.empty? then day = Time.new.strftime('%d') end
+    if category.empty? then category = 'student' end
+
+    puts "Enter post title:"
+    title = STDIN.gets.strip!
+    slug = title.gsub(" ", "-").strip.downcase
+    filename = ''+year+'-'+month+'-'+day+'-'+slug+".markdown"
+
     puts "Creating "+filename
-    cp '_posts/template.markdown', '_posts/'+filename
-    sh 'gvim ' + '_posts/'+filename
+    contents = "---\n"
+    contents += "layout: post\n"
+    contents += "titke: "+title+"\n"
+    contents += "category: "+category+"\n"
+    contents += "---\n"
+    File.open('_drafts/'+filename, 'w') {|f| f.write(contents) }
+    sh 'gvim ' + '_drafts/'+filename
+end
+
+# PUBLSH DRAFTS
+desc "Publishes the posts in the _drafts folder to _posts folder"
+task :publish do
+
+  Dir.foreach('_drafts') do |file|
+    next if file == '.' or file == '..'
+    puts 'Publish '+file+'? (Y/n)'
+    y = STDIN.gets.strip!
+
+    if y.casecmp("y") == 0 or y.empty?
+      puts "Moving #{file} to _posts/"
+      mv('_drafts/'+file, '_posts/'+file)
+    end
+  end
 end
 
 # COMMIT and INCREMENT VERSION
