@@ -2,7 +2,7 @@
 
 layout: post
 title: Free Public WiFi Phenomenon
-category: student-resource
+category: resource
 
 excerpt: Have you ever noticed a non-functioning, un-encrypted wireless network called "Free Public WiFi" popping up in your area? So did just about everyone in the world. Here is the story behind it.
 

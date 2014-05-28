@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How IBM Changed the Computer Market
-category: student-resource
+category: resource
 
 excerpt: IBM PC was not an exceptionally powerful machine. There was nothing special about it's hardware specifications, performance or even the CPU architecture. It was nowhere near the best, fastest of most competently designed machine on the market. But, the way IBM went about selling it drastically changed the computing landscape for years to come.
 ---

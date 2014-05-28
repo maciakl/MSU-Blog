@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Teaching programming with LOGO
-category: instructor-resource
+category: teaching
 
 excerpt: I usually devote a lab session to an exercise programming in LOGO. Why? Well, a lot of the lecture materials revolve around software, so it is only logical to show students a very rudimentary example of how it is written. It helps to demystify software development and reveal it as something mundane and ordinary rather than an arcane art practiced only by the select few.
 ---

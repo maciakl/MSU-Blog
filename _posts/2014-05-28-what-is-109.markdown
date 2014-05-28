@@ -1,0 +1,18 @@
+---
+layout: post
+title: What is 109?
+category: meta
+---
+
+You might be wondering why this site is name *"I Teach 109"*. What is so special
+about the number 109? Is it a reference to something? Is it a code? Is it an
+inside joke? What is the deal here?
+
+The answer is actually very simple. 109 is the old the old course number for 
+*Fluency in Technology*. This designation is now defunct, but before
+it was rebranded as CSIT-100 in the fall of 2014, the course used to be 
+labeled CMPT-109. This is how most students knew and referred to it throughout
+most of my MSU teaching career.
+
+When the name of the course changed, I decided to keep the name of the blog,
+both for consistency, and because it sounded better than *"I Teach 100"*.

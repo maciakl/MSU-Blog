@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up Tmux on the Turing Server
-category: technical-resource
+category: technology
 
 excerpt: The Turing server does not have Tmux, which is more or less criminal in this day and age. Fortunately, you can compile it from source and install it locally in your home directory. Here is how to do it.
 

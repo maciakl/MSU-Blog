@@ -2,7 +2,7 @@
 layout: post
 title: Osborne 1 - The First Laptop
 
-category: student-resource
+category: resource
 
 excerpt: Meet Osborne 1 - a 23 lb, sewing machine sized computer with a 5" display. What's so special about it? It was the first commercially available "laptop" computer. Or rather "portable" computer, because no one in their right mind would actually put this monstrosity on their lap - at least not without it causing some permanent damage.
 ---

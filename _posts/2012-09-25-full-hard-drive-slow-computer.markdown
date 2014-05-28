@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Does a full hard drive slow down your computer?
-category: student-resource
+category: resoure
 
 excerpt: Your computer is filled to the brim with vacation photos, music, movies, games and random documents. This must be why it is so slow, right? Wrong. Very, very wrong. While it is true that a hard drive that is about 99% full, may cause some problems, the amount of available storage space on your computer usually does not affect the performance. The primary function of a hard drive is to store and preserve your files. If this very function was being detrimental to the computer performance, it would be a very bad design flaw. So no, the piles upon piles of pictures and mp3s sitting on your hard drive do not slow you down. You gain absolutely nothing by deleting them.
 ---

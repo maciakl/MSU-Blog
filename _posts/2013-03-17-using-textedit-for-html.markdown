@@ -2,7 +2,7 @@
 
 layout: post
 title: Using TexEdit for Webdesign
-category: student-resource
+category: resource
 
 excerpt: In order to do the HTML lab and the final project you will need to use a plain text editor. This post describes how to configure TextEdit on a Mac to open HTML documents in plain text mode rather than in the default WYSIWYG mode.
 

@@ -2,7 +2,7 @@
 
 layout: post
 title: The Grand Narrative of the History of Computing
-category: student-resource
+category: resource
 
 excerpt: A discussion of the long history of computing given by Dr. Doron Swade given at the Gresham College.
 

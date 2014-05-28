@@ -2,7 +2,7 @@
 
 layout: post
 title: HTML and CSS Lab
-category: student-resource
+category: lab
 
 excerpt: This lab aims to teach you basic of web design using Hypertext Markup Language (HTML) and Cascading Style Sheets (CSS). These two technologies are the fundamental underlying building blocks of the world wide web, and are used to build every single site you visit during your day.
 

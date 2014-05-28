@@ -2,7 +2,7 @@
 layout: post
 title: MB vs MiB - Seagate Class Action Lawsuit
 
-category: student-resource
+category: resource
 
 excerpt: The scaling of memory measurement units can be a little bit ambiguous. An unscrupulous hardware manufacturers used a technicality to swindle thousands of customers until they got caught. All because of a disagreement about what the exact meaning of the prefixes such as "Mega" and "Giga" when talking about computer memory.
 ---

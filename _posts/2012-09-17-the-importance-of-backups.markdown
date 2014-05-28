@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Importance of Backups
-category: student-resource
+category: resource
 
 excerpt: The hard drive is the hardware component responsible for permanently storing all your data. Whenever you save documents, grab vacation pictures from your phone, download music from the internet, or mark websites as favorites, that information is stored on the hard drive. In most cases, your computer has only a single hard drive, and if anything happens to it, all your data can be lost. It is quite ironic that the hard drive is actually the most fragile and damage prone part of your computer.
 ---

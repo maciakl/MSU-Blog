@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MSUWEB Locking Files 
-category: technical-resource
+category: technology
 
 excerpt: While working on this blog I have noticed a strange issue with MSUWEB - sometimes it locks access to files and prevents them from being deleted or modified. Has anyone else noticed this issue or am I the only one?
 ---

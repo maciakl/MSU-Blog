@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File Comparison Challenge
-category: student-resource
+category: challenge
 
 excerpt: Can you quickly determine the differences between two documents? This challenge tests your general computer knowledge, problem solving skills and ability to research technology issues.
 
@@ -21,11 +21,11 @@ Your first instinct might be to read these files looking for obvious discrepanci
 
 I submit that you should be able to accurately compare these two files, and be able to give me a list of all the differences (by line number) in less than a minute (not including research time).
 
-Note that the files are definitely not identical: there are more than two (but less than ten) minor differences between them. Your task is to tell me which lines in file #2 were changed with respect to the file #1, which exact words in each of the lines were altered and how you found them.
+Note that the files are definitely not identical: there are more than two (but less than ten) minor differences between them. 
 
-If you are unable to do that, please describe what methods have you tried, and why do you think they failed.
+Your task is to tell me which lines in file #2 were changed with respect to the file #1, which exact words in each of the lines were altered and how you found them.
 
-Submit your results via Blackboard.
+Submit your findings via email. Put **CMPT-CHALLENGE** in the subject line.
 
 [f1]: {{site.baseurl}}/res/file1.txt
 [f2]: {{site.baseurl}}/res/file2.txt

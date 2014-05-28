@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Graphical User Interface Pioneers
-category: student-resource
+category: resource
 
 excerpt: Many people mistakenly credit either Apple or Microsoft for inventing windows, icons and mouse driven graphical interfaces that are a staple of modern software design. The truth is that neither of these companies had anything to do with this revolutionary paradigm shift in computing. They have both copied these ideas from elsewhere. The true inventor of the GUI as we know it, was Xerox.
 ---

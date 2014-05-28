@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Difference Engine - A Closeup Picture
-category: student-resource
+category: resource
 
 excerpt: The other day I have stumbled onto this amazing close-up picture of the Difference Engine gears and I figured I might as well share it here.
 ---

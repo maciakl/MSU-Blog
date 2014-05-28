@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sophos Antivirus False Positives
-category: technical-resource
+category: technology
 
 excerpt: It has come to my attention that the latest definition update has made Sophos Antivirus has been causing false positive detections that may leave the client in a broken state. This is relevant because Montclair State Office of Information Technology uses Sophos as a primary virus protection agent on all university machines and distributes it's copies to all students and instructors.
 ---

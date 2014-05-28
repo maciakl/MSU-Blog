@@ -113,6 +113,13 @@ task :publish do
   end
 end
 
+# RSYNC Ddeploy
+desc "Incrementally deploy to the server."
+task :rdeploy => [:build] do
+  sh "rsync --compress --recursive --checksum --delete --itemize-changes _site/ maciakl@atum.dreamhost.com:~/iteach109.com/"
+  sh "ssh maciakl@atum.dreamhost.com 'chmod -R 755 ~/iteach109.com'"
+end
+
 # COMMIT and INCREMENT VERSION
 desc "Commits all changes, increments version and attempts to push to github"
 task :commit => [:build] do

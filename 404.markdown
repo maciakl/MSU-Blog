@@ -1,0 +1,9 @@
+---
+layout: default
+title: 404 Not Found
+
+---
+
+# 404: Page Not Found
+
+Sorry, the page you were trying to access was not found. 

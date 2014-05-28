@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blogging on MSUWEB
-category: technical-resource
+category: technology
 
 excerpt: The MSUWEB service available to both students and faculty is very useful, but it has one major flaw - it is completely static. There is no server side scripting or database support, which makes it a less than ideal platform for personal blogging. Fortunately, not all blogging platforms require scripting or databases.
 ---

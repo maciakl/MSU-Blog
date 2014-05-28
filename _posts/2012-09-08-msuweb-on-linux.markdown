@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mounting MSUWEB on Linux
-category: technical-resource
+category: technology
 
 excerpt: I have noticed that OIT does not provide documentation on how to mount and access MSUWEB shares on Unix and Linux. They only provide instructions on how to mount it under Windows XP, Windows 7 and OSX. Here is my attempt to fill that void.
 ---

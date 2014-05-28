@@ -4,12 +4,13 @@ title: Home
 ---
 
     <!-- Show last 5 posts here -->
-    {% for post in site.posts limit: 5  %}
+    {% for post in paginator.posts %}
         <article>
             {% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
             <header>
             <h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
-            <span><i class="icon-clock"></i><time datetime="{{post.date | date: "%F"}}">{{ post.date | date: "%b %d, %Y" }}</time></span>
+            <span><i class="icon-clock"></i><time datetime="{{post.date | date: "%F"}}">{{ post.date | date: "%b %d, %Y" }}</time></span><br/>
+            <span class="category"><i class="icon-tag"></i> {{post.categories | category_links}}</span>
             </header>
 
             <div>{{ post.excerpt }}</div>
@@ -20,4 +21,24 @@ title: Home
         </article>
     {% endfor %}
 
-    <span id='more'><a href="{{site.baseurl}}/archive">{{ site.posts | size | minus: post_count }} more posts &raquo;</a></span>
+    
+        {% if paginator.next_page %}
+                <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+                &laquo; Older Posts</a>
+        {% endif %}
+
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+                    <span id="more">
+                    <a href="{{site.baseurl}}/">
+                    Newer Posts &raquo; </a>
+                    </span>
+            {% else %}
+                    <span id="more">
+                    <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+                    Newer Posts &raquo; </a>
+                    </span>
+            {% endif %}
+        {% endif %}
+
+    </ul>
