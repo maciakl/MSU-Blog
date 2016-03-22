@@ -475,17 +475,18 @@ You can learn more about CSS by reading the [W3C Tutorials][css].
 
 Your assignment is to create a simple HTML page. The topic matter is up to you. Your page must include:
 
-- Valid HTML5 including the correct DOCTYPE, head and title.
-- 4-5 short paragraphs of content (any topic). You should use headings and `<section>` tags organize it.
-- At least one image image with alt tags.
-- A bullet point or enumerated list list.
-- A properly linked CSS file with at least one rule.
+- Valid HTML5 including the correct `DOCTYPE` tag
+- Correctly formatted `<head>` tag including a `<title>` and a `<link>` tag pointing to a stylesheet file
+- Correctly linked CSS stylesheet file with at least one rule
+- At least 3 `<section>` tags inside of the `<body>` each containing a heading (`<h1>`, `<h2>`, etc..), 1-2 sentences, an image, a list or a table.
+- At least one image. All `<img>` tags must contain `alt` attribute.
+- At least one bullet point or enumerated list.
 
 For additional credit, please try the following:
 
-- Use a HTML table.
-- Use `<header>`, `<footer>`, `<main>` and etc.
-- Have more than 3 CSS rules.
+- Use a HTML table. (10pt)
+- Have more than 3 CSS rules. (10pt)
+- Use css rules to style specific tags based on `id` and `class` attributes. (20pt)
 
 Please refer to Blackboard for instructions how to submit this assignment.
 
