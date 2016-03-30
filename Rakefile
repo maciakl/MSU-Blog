@@ -31,40 +31,6 @@ task :lint => [:build] do
 end
 
 
-# DEPLOY - WINDOWS ONLY
-desc "Deploy on Windows"
-task :windeploy => [:build] do
-    puts "Deploying the site from windows..."
-    puts "The target path is: "+WINPATH+FOLDER
-
-    rm_rf(WINPATH+FOLDER)
-    cp_r("_site", WINPATH)
-    mv(WINPATH+"/_site", WINPATH+FOLDER)
-end
-
-# DEPLOY - LINUX ONLY
-desc "Deploy on Linux"
-task :lindeploy => [:build] do
-    puts "Deploying the site from Linux..."
-    puts "The target path is: "+LINPATH+FOLDER
-
-    rm_rf(LINPATH+FOLDER)
-    cp_r("_site", LINPATH)
-    mv(LINPATH+"/_site", LINPATH+FOLDER)
-end
-
-
-
-# DEPLOY - PLATFORM INDEPENDENT
-desc "Deploy. Tries to detect the platform. Might be wrong."
-task :deploy =>[:commit] do
-    if(IS_WINDOWS)
-        Rake::Task["windeploy"].execute
-    else
-        Rake::Task["lindeploy"].execute
-    end
-end
-
 # NEW POST
 desc "Creates a new post in _drafts directory"
 task :new do
@@ -115,9 +81,15 @@ end
 
 # RSYNC Ddeploy
 desc "Incrementally deploy to the server."
-task :rdeploy => [:build] do
+task :deploy => [:build] do
   sh "rsync --compress --recursive --checksum --delete --itemize-changes _site/ maciakl@atum.dreamhost.com:~/iteach109.com/"
   sh "ssh maciakl@atum.dreamhost.com 'chmod -R 755 ~/iteach109.com'"
+end
+
+# Tunnel Deploy
+desc "Deploy via a SSH tunnel (from work)"
+task :tdeploy => [:build] do
+  sh 'rsync --rsh="ssh -p 1234" --compress --recursive --checksum --delete --itemize-changes --exclude-from exclude.rsync _site/* maciakl@localhost:~/iteach109.com/'
 end
 
 # COMMIT and INCREMENT VERSION

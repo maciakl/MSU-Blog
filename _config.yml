@@ -5,6 +5,8 @@ description: I'm Luke, I teach CMPT-109 at Montclair State University and this i
 baseurl:
 url: http://msuweb.montclair.edu/~maciakl/blog
 
+# Enable pagination
+gems: ["jekyll-paginate"] # only needed on Jekyll 3, comment out otherwise
 paginate: 5
 
 category_dir: /
