@@ -1,10 +1,3 @@
-IS_WINDOWS = (RUBY_PLATFORM =~ /mingw/i) ? true : false
-IS_MAC = (RUBY_PLATFORM =~ /darwin/i) ? true : false
-
-WINPATH = "x:"
-LINPATH = "/remote/msuweb"
-FOLDER = "/blog"
-
 # CHECK system
 desc "Check if all the tools are installed."
 task :check do
@@ -15,6 +8,7 @@ task :check do
   sh "npm --version"
   sh "jekyll --version"
   sh "grunt --version"
+  sh "rsync --version"
 end
 
 # BUILD the website using jekyll
