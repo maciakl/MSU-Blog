@@ -46,7 +46,7 @@ task :new do
     if year.empty? then year = Time.new.strftime('%Y') end
     if month.empty? then month = Time.new.strftime('%m') end
     if day.empty? then day = Time.new.strftime('%d') end
-    if category.empty? then category = 'student' end
+    if category.empty? then category = 'resource' end
 
     puts "Enter post title:"
     title = STDIN.gets.strip!
