@@ -89,7 +89,7 @@ end
 # Tunnel Deploy
 desc "Deploy via a SSH tunnel (from work)"
 task :tdeploy => [:build] do
-  sh 'rsync --rsh="ssh -p 1234" --compress --recursive --checksum --delete --itemize-changes --exclude-from exclude.rsync _site/* maciakl@localhost:~/iteach109.com/'
+  sh 'rsync --rsh="ssh -p 1234" --compress --recursive --checksum --delete --itemize-changes _site/* maciakl@localhost:~/iteach109.com/'
 end
 
 # COMMIT and INCREMENT VERSION
