@@ -1,7 +1,7 @@
 ---
 layout: post
 titke: Binary Arithmetic and Negative Numbers
-category: student
+category: resource
 ---
 
 In class we learned how to convert numbers from decimal to binary and the other way around. Let’s talk about some more advanced concepts.

@@ -478,7 +478,7 @@ Your assignment is to create a simple HTML page. The topic matter is up to you. 
 - Valid HTML5 including the correct `DOCTYPE` tag
 - Correctly formatted `<head>` tag including a `<title>` and a `<link>` tag pointing to a stylesheet file
 - Correctly linked CSS stylesheet file with at least one rule
-- At least 3 `<section>` tags inside of the `<body>` each containing a heading (`<h1>`, `<h2>`, etc..), 1-2 sentences, an image, a list or a table.
+- At least 3 `<section>` tags inside of the `<body>` each containing a 1-3 sentences enclosed in `<p>` tags, an image, a list or a table. At least one section should start with a heading (`<h1>`, `<h2>`, etc..)
 - At least one image. All `<img>` tags must contain `alt` attribute.
 - At least one bullet point or enumerated list.
 
@@ -488,7 +488,7 @@ For additional credit, please try the following:
 - Have more than 3 CSS rules. (10pt)
 - Use css rules to style specific tags based on `id` and `class` attributes. (20pt)
 
-Please refer to Blackboard for instructions how to submit this assignment.
+For submitting, please refer to the [Submission Instructions](/resource/2016/03/30/publishing-to-msuweb/).
 
 [tx]: {{site.baseurl}}/student-resource/2013/03/17/using-textedit-for-html/
 [cc]: http://www.computerhope.com/htmcolor.htm

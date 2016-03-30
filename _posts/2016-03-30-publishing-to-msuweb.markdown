@@ -1,7 +1,7 @@
 ---
 layout: post
 titke: Publishing to MSUWeb
-category: student
+category: resource
 ---
 
 Every MSU student has the ability to publish a personal web site, or course related documents on the MSUWeb server. This post will show you how to access your MSUWeb space, and how to publish files to it.
