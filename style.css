@@ -180,8 +180,11 @@ time {
 
 @media print {
 
+    #top { display: none; }
     nav { display: none; }
     main { margin-left: 0px; width: 100%; }
     footer { display: none; }
-    code { overflow: visible; }
+    article>header>span { display: none; }
+    code { overflow: visible; page-break-inside: avoid;  }
+    pre { margin: 0; padding: 0; }
 }
