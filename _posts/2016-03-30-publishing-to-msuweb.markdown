@@ -8,12 +8,12 @@ Every MSU student has the ability to publish a personal web site, or course rela
 
 ### Preparing Your Files
 
-Before you are ready to publish your website, create a new folder that will contain all of it's files. The folder should be named `lab7` or something similar, so that you can figure out what is inside just by looking at it.
+Before you are ready to publish your website, create a new folder that will contain all of it's files. The folder should be named `html1`, `html2` or `project` depending on the assignment. Please refer to the assignment instructions for details on naming your folder.
 
 Your folder should contain the following:
 
-- The HTML file (I recommend naming it `index.html`)
-- The CSS file (I recommend naming it `style.css`)
+- The HTML file named `index.html`
+- The CSS file named `style.css` (for `html2` and `project` only)
 - Any image files you have used in your website
 
 Place all the files in the folder, and double-click on the HTML file and make sure all your styles are applied and that all the images are showing up. If you see broken images, or missing styles, make sure you have all the files you created in the new folder.
@@ -30,41 +30,43 @@ Once you do this, make sure you access the published website via a web browser.
 
 ### Accessing a Published Website
 
-Any files you place in your `W:` drive will be immediately published to the `msuweb.montclair.edu` web server and made available online. Each student is assigned their own folder on the server, named using their netid. Your personal folder will have the following url:
+Any files you place in your `W:` drive will be immediately published to the `msuweb.montclair.edu` web server and made available online. 
+
+Each student is assigned their own folder on the server, named using their netid. Your personal folder will have the following url:
 
     http://msuweb.montclair.edu/~YOURNETID
 
 Naturally, replace `~YOURNETID` with your actual NETID. For example, mine would be `~maciakl`. Please do not forget to put the tilde key in front of your NETID when doing this. The tilde key can be found to the left of the #1 key on your keyboard (you will have to press Shift to type it):
 
-![](/img/tilde.png)
+![Tildae Key Location](/img/tilde.png)
 
 To see the files you have published, you have to append the name of the folder, and the name of the HTML file you have just published to the URL above. So the actual URL you will be accessing will be:
 
-    http://msuweb.montclair.edu/~YOURNETID/FOLDERNAME/FILENAME.html
+    http://msuweb.montclair.edu/~YOURNETID/FOLDERNAME/
 
-If you named your HTML file `index.html` you can skip the file name. The server is configured to send a file named `index.html` when no file name is given.
+For example, imagine I have named my folder `html1`. Then my URL would be like so:
 
-For example, imagine I have named my folder `lab7` and my file `webpage.html`. Then my URL would be like so:
+    http://msuweb.montclair.edu/~maciakl/html1/
 
-    http://msuweb.montclair.edu/~maciakl/lab7/webpage.html
-
-Note that you don't need to specify the CCS file or any image files in the URL. If they are properly linked in the HTML, they will be displayed without any issues.
+Substitute your own NetID and folder name into the URL above, and test it in your web browser. If it works, and you can see your web-page, complete with formating and images, submit the URL via Canvas.
 
 ### Publishing Your Website from Home Using Windows
 
-If you are trying to do this lab from home, using a personal computer with Windows, you will not have the `W:` drive accessible. You will have to connect it. To do this, click on start menu and type in `cmd`. This should bring up **Command Prompt** icon. Click on it.
+If you are trying to do this lab from home, using a personal computer with Windows, you will not have the `W:` drive accessible. You will have to connect it. 
+
+To do this, click on start menu and type in `cmd`. This should bring up **Command Prompt** icon. Click on it.
 
 In the Command Prompt window, type in the following command:
 
     net use w: https://msuwebdav.montclair.edu/pubweb_vol1/YOURNETID
 
-Naturally, you replace `YOURNETID` with your actual NETID. For example, for me this command would be:
+Naturally, you replace `YOURNETID` with your actual NetID. For example, for me this command would be:
 
     net use w: https://msuwebdav.montclair.edu/pubweb_vol1/maciakl
 
 You will then be prompted for a user name and a password, which, as you might have guessed, are your NETID user name and password.
 
-![](/img/netuse.png)
+![Windows Net Use Example](/img/netuse.png)
 
 If you did this correctly, you should see *The command completed successfuly* in the command prompt window, and the `W:` drive should now be available under `My Computer`.
 
